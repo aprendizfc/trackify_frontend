@@ -1,0 +1,50 @@
+.trackifyButton {
+  display: inline-flex;
+  justify-content: center;
+  appearance: none;
+  cursor: pointer;
+  font-size: var(--font-sm);
+  font-weight: var(--font-semibold);
+  border-radius: var(--radius-sm);
+  border: solid 1px transparent;
+  transition: opacity 0.3s ease;
+
+  &:focus {
+    outline-style: solid;
+    outline-width: 2px;
+    outline-offset: 2px;
+  }
+
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &.trackifyPrimaryButton {
+    background-color: var(--primary);
+    color: var(--main);
+
+    &:focus {
+      outline-color: var(--primary);
+    }
+
+    &.trackifySMButton {
+      min-width: 2rem;
+      padding: 8px 12px;
+    }
+
+    &.trackifyMDButton {
+      min-width: 2.5rem;
+      padding: 12px 24px;
+    }
+
+    &.trackifyLGButton {
+      min-width: 3rem;
+      padding: 16px 24px;
+    }
+
+    &.trackifyFullButton {
+      width: 100%;
+      padding: 12px 24px;
+    }
+  }
+}
