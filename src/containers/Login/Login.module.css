@@ -1,0 +1,23 @@
+.container {
+  width: 400px;
+  background-color: var(--secondary);
+  border-radius: var(--radius-sm);
+  padding: 2.5rem;
+
+  button {
+    margin-top: var(--spacer-lg);
+  }
+
+  .registerWrapper {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacer);
+    font-size: var(--font-sm);
+    padding: var(--spacer);
+
+    a {
+      font-weight: var(--font-semibold);
+      color: var(--primary);
+    }
+  }
+}
