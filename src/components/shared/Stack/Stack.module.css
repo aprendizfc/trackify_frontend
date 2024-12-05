@@ -1,0 +1,34 @@
+.trackifyStack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--stack-gutter-size, 0);
+}
+
+.trackifyStackXXS {
+  --stack-gutter-size: 0.25rem;
+}
+
+.trackifyStackXS {
+  --stack-gutter-size: 0.5rem;
+}
+
+.trackifyStackSM {
+  --stack-gutter-size: 0.75rem;
+}
+
+.trackifyStackMD {
+  --stack-gutter-size: 1.25rem;
+}
+
+.trackifyStackLG {
+  --stack-gutter-size: 2rem;
+}
+
+.trackifyStackXL {
+  --stack-gutter-size: 3rem;
+}
+
+.trackifyStackXXL {
+  --stack-gutter-size: 4rem;
+}
