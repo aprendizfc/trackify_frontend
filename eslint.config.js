@@ -1,17 +1,22 @@
-import js from '@eslint/js'
-import globals from 'globals'
+import pluginJs from '@eslint/js'
+import pluginReact from 'eslint-plugin-react'
 import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
+import globals from 'globals'
 import tseslint from 'typescript-eslint'
 
-export default tseslint.config(
-  { ignores: ['dist'] },
+/** @type {import('eslint').Linter.Config[]} */
+export default [
+  pluginJs.configs.recommended,
+  ...tseslint.configs.recommended,
+  pluginReact.configs.flat.recommended,
   {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
-    files: ['**/*.{ts,tsx}'],
+    ignores: ['dist'],
+    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
+      ecmaVersion: 'latest',
       globals: globals.browser,
+      sourceType: 'module',
     },
     plugins: {
       'react-hooks': reactHooks,
@@ -20,6 +25,16 @@ export default tseslint.config(
     rules: {
       ...reactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+      'react/jsx-closing-bracket-location': ['error', 'tag-aligned'],
+      'react/self-closing-comp': [
+        'error',
+        {
+          component: true,
+          html: true,
+        },
+      ],
+      'react/no-unescaped-entities': 'off',
+      'react/react-in-jsx-scope': 'off',
       'no-console': 'warn',
       'no-var': 'error',
       'no-case-declarations': 'error',
@@ -42,6 +57,24 @@ export default tseslint.config(
       semi: ['error', 'never'],
       'no-unexpected-multiline': 'error',
       'no-unreachable': 'error',
+      'no-useless-concat': 'error',
+      'prefer-template': 'error',
+      'object-shorthand': ['error', 'always'],
+      'padding-line-between-statements': [
+        'error',
+        { blankLine: 'always', prev: ['import'], next: 'export' },
+      ],
+      'template-curly-spacing': ['error', 'never'],
+      'max-len': [
+        'error',
+        {
+          code: 90,
+          tabWidth: 2,
+          ignoreStrings: true,
+          ignoreTemplateLiterals: true,
+          ignoreUrls: true,
+        },
+      ],
     },
-  }
-)
+  },
+]
