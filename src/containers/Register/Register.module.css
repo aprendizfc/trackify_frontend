@@ -3,8 +3,8 @@
   background-color: var(--secondary);
   border-radius: var(--radius-sm);
   padding: 2.5rem;
+}
 
-  button {
-    margin-top: var(--gutter-lg);
-  }
+.container button {
+  margin-top: var(--gutter);
 }

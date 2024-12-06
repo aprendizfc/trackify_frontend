@@ -3,21 +3,8 @@
   background-color: var(--secondary);
   border-radius: var(--radius-sm);
   padding: 2.5rem;
+}
 
-  button {
-    margin-top: var(--gutter-lg);
-  }
-
-  .registerWrapper {
-    display: flex;
-    justify-content: center;
-    gap: var(--gutter);
-    font-size: var(--font-sm);
-    padding: var(--gutter);
-
-    a {
-      font-weight: var(--font-semibold);
-      color: var(--primary);
-    }
-  }
+.container button {
+  margin-top: var(--gutter);
 }
