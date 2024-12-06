@@ -26,13 +26,16 @@
   --font-sm: 0.875rem;
   --font-md: 1rem;
 
+  --input-shadow: 0 0 0 var(--gutter-sm);
+
   --radius: 0.5rem;
   --radius-sm: calc(var(--radius) / 2);
   --radius-lg: calc(var(--radius) * 2);
 
-  --spacer: 0.5rem;
-  --spacer-sm: calc(var(--spacer) / 2);
-  --spacer-lg: calc(var(--spacer) * 2);
+  --gutter: 0.5rem;
+  --gutter-sm: calc(var(--gutter) / 2);
+  --gutter-lg: calc(var(--gutter) * 2);
+  --gutter-xl: calc(var(--gutter) * 3);
 }
 
 *,
