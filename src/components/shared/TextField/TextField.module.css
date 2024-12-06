@@ -2,18 +2,14 @@
   position: relative;
 
   .trackifyTextFieldWrapper {
-    margin-top: var(--spacer-sm);
+    margin-top: var(--gutter-sm);
   }
 }
 
 .trackifyTextFieldInlineOuterContainer {
   display: inline-flex;
   align-items: center;
-  gap: var(--spacer-lg);
-
-  /* .trackifyTextFieldLabelWrapper {
-    margin-right: var(--spacer-lg);
-  } */
+  gap: var(--gutter-lg);
 }
 
 .trackifyTextFieldLabelWrapper {
@@ -24,13 +20,17 @@
   height: 40px;
   font-size: var(--font-sm);
   color: var(--text);
-  border: 0;
+  border: solid 1px transparent;
   border-radius: var(--radius-sm);
   background-color: var(--main);
-  padding: var(--spacer);
+  padding: var(--gutter);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.3s ease;
 
   &:focus {
-    outline: solid var(--primary) 2px;
-    /* outline-offset: -1px; */
+    outline: 0;
+    border-color: var(--primary);
+    box-shadow: var(--input-shadow) rgb(from var(--primary) r g b / 0.2);
   }
 }
