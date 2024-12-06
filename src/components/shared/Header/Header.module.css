@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 75px;
+  background-color: var(--primary);
+}
+
+.nav {
+  display: inline-flex;
+  gap: var(--gutter-lg);
+}
+
+.nav a {
+  font-size: var(--font-sm);
+  color: var(--main);
+
+  &:focus {
+    outline-color: inherit;
+  }
+}
