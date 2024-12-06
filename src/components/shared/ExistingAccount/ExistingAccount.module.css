@@ -2,12 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: var(--spacer);
+  gap: var(--gutter);
   font-size: var(--font-sm);
-  margin-top: var(--spacer);
+  margin-top: var(--gutter);
+}
 
-  a {
-    font-weight: var(--font-semibold);
-    color: var(--primary);
-  }
+.container a {
+  font-weight: var(--font-semibold);
+  color: var(--primary);
 }
