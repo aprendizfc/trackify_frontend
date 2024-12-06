@@ -5,6 +5,6 @@
   padding: 2.5rem;
 
   button {
-    margin-top: var(--spacer-lg);
+    margin-top: var(--gutter-lg);
   }
 }
