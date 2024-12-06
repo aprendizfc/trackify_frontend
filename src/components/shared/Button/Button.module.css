@@ -13,6 +13,7 @@
     outline-style: solid;
     outline-width: 2px;
     outline-offset: 2px;
+    transition: outline-offset 0.2s ease-out;
   }
 
   &:hover {
