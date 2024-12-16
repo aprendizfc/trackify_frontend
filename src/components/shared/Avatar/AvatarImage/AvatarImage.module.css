@@ -1,0 +1,10 @@
+.container {
+  display: inline-flex;
+  width: var(--avatar-size, 2.5rem);
+  height: var(--avatar-size, 2.5rem);
+}
+
+.container img {
+  width: inherit;
+  border-radius: inherit;
+}

@@ -1,0 +1,10 @@
+.container {
+  display: grid;
+  place-content: center;
+  text-transform: uppercase;
+  color: var(--text);
+  background-color: var(--main);
+  padding: var(--gutter-sm);
+  width: var(--avatar-size, 2.5rem);
+  height: var(--avatar-size, 2.5rem);
+}
