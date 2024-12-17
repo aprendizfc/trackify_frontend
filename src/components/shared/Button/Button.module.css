@@ -15,7 +15,7 @@
 
   &.trackifyPrimaryButton {
     background-color: var(--primary);
-    color: var(--main);
+    color: var(--white);
 
     &.trackifySMButton {
       min-width: 2rem;

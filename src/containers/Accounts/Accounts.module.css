@@ -30,7 +30,7 @@
   flex-direction: column;
   gap: var(--gutter-xl);
   border: solid 1px var(--border);
-  background-color: var(--main);
+  background-color: var(--white);
   border-radius: var(--radius-sm);
   font-weight: var(--font-normal);
   padding: var(--gutter);

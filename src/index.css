@@ -16,7 +16,7 @@
   --secondary: #d1d1e9;
   --tertiary: #e45858;
   --text: #2b2c34;
-  --main: #fffffe;
+  --white: #fffffe;
   --border: #d1d5db;
 
   --font-light: 300;
@@ -55,7 +55,7 @@ body {
   width: 100%;
   min-height: 100vh;
   height: 100vh;
-  background-color: var(--main);
+  background-color: var(--white);
 }
 
 body > div {

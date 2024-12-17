@@ -22,7 +22,7 @@
   color: var(--text);
   border: solid 1px transparent;
   border-radius: var(--radius-sm);
-  background-color: var(--main);
+  background-color: var(--white);
   padding: var(--gutter);
   transition:
     border-color 0.2s ease,

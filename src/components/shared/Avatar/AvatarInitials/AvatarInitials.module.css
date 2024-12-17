@@ -3,7 +3,7 @@
   place-content: center;
   text-transform: uppercase;
   color: var(--text);
-  background-color: var(--main);
+  background-color: var(--white);
   padding: var(--gutter-sm);
   width: var(--avatar-size, 2.5rem);
   height: var(--avatar-size, 2.5rem);
