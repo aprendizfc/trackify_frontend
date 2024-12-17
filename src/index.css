@@ -17,6 +17,7 @@
   --tertiary: #e45858;
   --text: #2b2c34;
   --main: #fffffe;
+  --border: #d1d5db;
 
   --font-light: 300;
   --font-normal: 400;
@@ -27,6 +28,10 @@
   --font-md: 1rem;
 
   --input-shadow: 0 0 0 var(--gutter-sm);
+
+  --card-shadow: rgb(from var(--text) r g b / 0.25) 0 1.875rem 1.875rem -1.5625rem;
+
+  --header-height: 75px;
 
   --radius: 0.5rem;
   --radius-sm: calc(var(--radius) / 2);
@@ -67,7 +72,8 @@ a:hover {
   text-decoration: underline;
 }
 
-a:focus {
+a:focus,
+button:focus {
   outline: solid 2px var(--primary);
   outline-offset: 2px;
 }
