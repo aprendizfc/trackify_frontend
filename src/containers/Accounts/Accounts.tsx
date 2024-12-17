@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import Button from '../../components/shared/Button/Button'
 import * as styles from './Accounts.module.css'
 import { Link } from 'react-router'
+import { formatMoney } from '../../js/utils/formatMoney'
 
 export default function Accounts() {
   const accounts = useMemo(() => {
@@ -12,7 +13,7 @@ export default function Accounts() {
           <span className={styles.accountType}>Saving Account</span>
         </span>
 
-        <span className={styles.accountBalance}>1000</span>
+        <span className={styles.accountBalance}>{formatMoney(1000.12)}</span>
       </Link>
     ))
   }, [])
