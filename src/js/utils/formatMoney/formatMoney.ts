@@ -7,7 +7,7 @@ const DEFAULT_OPTIONS: FormatMoneyOptions = {
 }
 
 export function formatMoney(amount: number, options?: FormatMoneyOptions): string {
-  const formatOptions = options || DEFAULT_OPTIONS
+  const formatOptions = { ...DEFAULT_OPTIONS, ...options }
   const formatter = new Intl.NumberFormat('en-US', formatOptions)
 
   return formatter.format(amount)
