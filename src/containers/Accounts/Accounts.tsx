@@ -2,7 +2,7 @@ import { useMemo } from 'react'
 import Button from '../../components/shared/Button/Button'
 import * as styles from './Accounts.module.css'
 import { Link } from 'react-router'
-import { formatMoney } from '../../js/utils/formatMoney'
+import { formatMoney } from '../../js/utils/formatMoney/formatMoney'
 
 export default function Accounts() {
   const accounts = useMemo(() => {
