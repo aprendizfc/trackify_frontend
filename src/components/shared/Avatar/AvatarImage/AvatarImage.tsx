@@ -1,4 +1,4 @@
-import cx from '../../../../js/utils/classNames'
+import cx from '../../../../js/utils/classNames/classNames'
 import type { AvatarImageProps } from '../Avatar.types'
 import avatarStyles from '../Avatar.module.css'
 import styles from './AvatarImage.module.css'

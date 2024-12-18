@@ -1,4 +1,4 @@
-import cx from '../../../js/utils/classNames'
+import cx from '../../../js/utils/classNames/classNames'
 import styles from './Button.module.css'
 
 export interface ButtonProps extends React.ComponentProps<'button'> {
