@@ -41,7 +41,7 @@ export default [
       'no-confusing-arrow': ['warn', { allowParens: true }],
       'no-return-assign': 'warn',
       'no-trailing-spaces': ['warn', { skipBlankLines: true, ignoreComments: false }],
-      'spaced-comment': ['warn', 'always'],
+      'spaced-comment': ['warn', 'always', { markers: '/' }],
       'lines-between-class-members': 'error',
       'no-else-return': 'warn',
       'no-loss-of-precision': 'warn',
