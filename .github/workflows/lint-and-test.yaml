@@ -6,18 +6,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Action
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        width:
+          version: 9
       - name: Setup NodeJS
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
+          cache: 'pnpm'
       - name: Setup dependencies
-        run: npm ci
+        run: pnpm install --frozen-lockfile
       - name: Lint
         run: |
           echo 'Linting App'
-          npm run lint
+          pnpm run lint
       - name: Test
         run: |
           echo 'Testing App'
-          npm run test
+          pnpm run test
