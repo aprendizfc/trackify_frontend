@@ -1,0 +1,28 @@
+name: lint-and-test
+on:
+  pull_request:
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Action
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        width:
+          version: 9
+      - name: Setup NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: '.nvmrc'
+          cache: 'pnpm'
+      - name: Setup dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Lint
+        run: |
+          echo 'Linting App'
+          pnpm run lint
+      - name: Test
+        run: |
+          echo 'Testing App'
+          pnpm run test
