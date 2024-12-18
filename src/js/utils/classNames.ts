@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 
 function appendClasses(classes: string, newClass: string): string {
-  if (classes) return `${classes} ${newClass}`
+  if (!newClass) return classes
 
-  return newClass
+  return classes ? `${classes} ${newClass}` : newClass
 }
 
 function getClasses(argument: any) {
@@ -14,15 +14,13 @@ function getClasses(argument: any) {
   // eslint-disable-next-line prefer-spread
   if (Array.isArray(argument)) return classNames.apply(null, argument)
 
-  let classes = ''
-
-  for (const key in argument) {
-    if (argument[key]) {
-      classes = appendClasses(classes, key)
-    }
+  if (typeof argument === 'object') {
+    return Object.keys(argument)
+      .filter((key) => argument[key])
+      .join(' ')
   }
 
-  return classes
+  return ''
 }
 
 export default function classNames(...args: any) {
