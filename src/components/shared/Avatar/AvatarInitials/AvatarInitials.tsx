@@ -1,6 +1,6 @@
 import useColor from './useColor'
 import type { AvatarInitialsProps } from '../Avatar.types'
-import cx from '../../../../js/utils/classNames'
+import cx from '../../../../js/utils/classNames/classNames'
 import avatarStyles from '../Avatar.module.css'
 import styles from './AvatarInitials.module.css'
 

@@ -1,4 +1,4 @@
-import cx from '../../../js/utils/classNames'
+import cx from '../../../js/utils/classNames/classNames'
 import styles from './ExistingAccount.module.css'
 
 export interface ExistingAccountProps extends React.ComponentProps<'div'> {
