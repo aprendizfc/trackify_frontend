@@ -1,0 +1,23 @@
+name: lint-and-test
+on:
+  pull_request:
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Action
+        uses: actions/checkout@v3
+      - name: Setup NodeJS
+        uses: actions/setup-node@v3
+        with:
+          node-version-file: '.nvmrc'
+      - name: Setup dependencies
+        run: npm ci
+      - name: Lint
+        run: |
+          echo 'Linting App'
+          npm run lint
+      - name: Test
+        run: |
+          echo 'Testing App'
+          npm run test
