@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router'
 import Header from '../../components/shared/Header/Header'
 import Container from '../../components/shared/Container/Container'
-import styles from './HomeLayout.module.css'
+import * as styles from './HomeLayout.module.css'
 
 export default function HomeLayout() {
   return (

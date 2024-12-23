@@ -1,5 +1,5 @@
 import { NavLink } from 'react-router'
-import styles from './Header.module.css'
+import * as styles from './Header.module.css'
 import Container from '../Container/Container'
 import Avatar from '../Avatar/Avatar'
 

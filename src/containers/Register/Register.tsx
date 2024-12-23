@@ -2,7 +2,7 @@ import { Link } from 'react-router'
 import Button from '../../components/shared/Button/Button'
 import Stack from '../../components/shared/Stack/Stack'
 import TextField from '../../components/shared/TextField/TextField'
-import styles from './Register.module.css'
+import * as styles from './Register.module.css'
 import ExistingAccount from '../../components/shared/ExistingAccount/ExistingAccount'
 
 export default function Register() {
