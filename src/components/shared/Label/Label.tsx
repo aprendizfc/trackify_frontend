@@ -1,5 +1,5 @@
 import cx from '../../../js/utils/classNames/classNames'
-import styles from './Label.module.css'
+import * as styles from './Label.module.css'
 
 export interface LabelProps extends React.ComponentProps<'label'> {
   isVisible?: boolean

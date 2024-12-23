@@ -1,4 +1,4 @@
-import styles from './Container.module.css'
+import * as styles from './Container.module.css'
 
 export interface ContainerProps extends React.ComponentProps<'div'> {
   children: React.ReactNode

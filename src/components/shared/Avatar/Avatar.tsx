@@ -1,4 +1,4 @@
-import styles from './Avatar.module.css'
+import * as styles from './Avatar.module.css'
 import AvatarInitials from './AvatarInitials/AvatarInitials'
 import type { AvatarProps } from './Avatar.types'
 import AvatarImage from './AvatarImage/AvatarImage'

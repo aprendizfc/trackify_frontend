@@ -1,6 +1,6 @@
 import cx from '../../../js/utils/classNames/classNames'
 import Label from '../Label/Label'
-import styles from './TextField.module.css'
+import * as styles from './TextField.module.css'
 
 export interface TextFieldProps extends React.ComponentProps<'input'> {
   label: string

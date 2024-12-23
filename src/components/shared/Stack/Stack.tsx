@@ -1,5 +1,5 @@
 import classNames from '../../../js/utils/classNames/classNames'
-import styles from './Stack.module.css'
+import * as styles from './Stack.module.css'
 
 export interface StackProps extends React.ComponentProps<'div'> {
   gutter?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'

@@ -1,5 +1,5 @@
 import cx from '../../../js/utils/classNames/classNames'
-import styles from './ExistingAccount.module.css'
+import * as styles from './ExistingAccount.module.css'
 
 export interface ExistingAccountProps extends React.ComponentProps<'div'> {
   children: React.ReactNode
