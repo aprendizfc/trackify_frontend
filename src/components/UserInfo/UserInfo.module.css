@@ -1,0 +1,5 @@
+.userInfoWrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--gutter);
+}

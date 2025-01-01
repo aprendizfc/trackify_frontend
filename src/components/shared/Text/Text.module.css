@@ -1,0 +1,16 @@
+.text {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &.textXS {
+    font-size: var(--font-xs);
+  }
+
+  &.textSM {
+    font-size: var(--font-sm);
+  }
+
+  &.textMD {
+    font-size: var(--font-md);
+  }
+}
