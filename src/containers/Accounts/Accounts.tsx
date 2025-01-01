@@ -1,8 +1,7 @@
 import { useMemo } from 'react'
-import Button from '../../components/shared/Button/Button'
-import * as styles from './Accounts.module.css'
 import { Link } from 'react-router'
 import { formatMoney } from '../../js/utils/formatMoney/formatMoney'
+import * as styles from './Accounts.module.css'
 
 export default function Accounts() {
   const accounts = useMemo(() => {
@@ -20,11 +19,6 @@ export default function Accounts() {
 
   return (
     <div className={styles.content}>
-      <aside>
-        <h1>Accounts</h1>
-        <Button size="full">Add Account</Button>
-      </aside>
-
       <div className={styles.accounts}>{accounts}</div>
     </div>
   )

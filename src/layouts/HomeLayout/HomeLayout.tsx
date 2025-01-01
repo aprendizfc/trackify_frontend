@@ -1,17 +1,14 @@
 import { Outlet } from 'react-router'
-import Header from '../../components/shared/Header/Header'
-import Container from '../../components/shared/Container/Container'
+import { Aside } from './Aside/Aside'
 import * as styles from './HomeLayout.module.css'
 
 export default function HomeLayout() {
   return (
     <div className={styles.wrapper}>
-      <Header />
+      <Aside />
 
       <main>
-        <Container>
-          <Outlet />
-        </Container>
+        <Outlet />
       </main>
     </div>
   )
