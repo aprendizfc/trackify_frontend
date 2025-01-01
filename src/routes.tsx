@@ -17,7 +17,7 @@ export default function AppRoutes() {
       <Route element={<HomeLayout />}>
         <Route index element={<p>Dashboard</p>} />
         <Route path="accounts" element={<Accounts />} />
-        <Route path="records" element={<p>Records</p>} />
+        <Route path="transactions" element={<p>Transactions</p>} />
       </Route>
     </Routes>
   )
