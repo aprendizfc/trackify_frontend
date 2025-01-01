@@ -1,0 +1,52 @@
+.aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 18.75rem;
+  height: 100vh;
+  padding: var(--gutter-xl);
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  border: solid 1px transparent;
+  padding: var(--gutter);
+  margin-bottom: var(--gutter);
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.navLink svg {
+  margin-right: var(--gutter);
+}
+
+.navActiveLink {
+  border: solid 1px var(--border);
+  background-color: white;
+  box-shadow: var(--card-shadow);
+}
+
+/* .aside nav a {
+  display: flex;
+  align-items: center;
+  color: var(--text);
+  border-radius: var(--radius-sm);
+  border: solid 1px transparent;
+  padding: var(--gutter-sm);
+  margin-bottom: var(--gutter);
+
+  &:global.active {
+    border: solid 1px var(--border);
+    background-color: white;
+    box-shadow: var(--card-shadow);
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+} */
