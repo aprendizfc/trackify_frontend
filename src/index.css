@@ -25,8 +25,13 @@
   --font-semibold: 600;
   --font-bold: 700;
 
+  --font-xs: 0.75rem;
   --font-sm: 0.875rem;
   --font-md: 1rem;
+
+  --button-sm: 2rem;
+  --button-md: 2.5rem;
+  --button-lg: 3rem;
 
   --input-shadow: 0 0 0 var(--gutter-sm);
 
