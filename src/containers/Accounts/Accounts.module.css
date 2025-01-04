@@ -3,17 +3,6 @@
   gap: var(--gutter-xl);
 }
 
-.content aside {
-  position: sticky;
-  align-self: flex-start;
-  top: var(--header-height);
-  width: 100%;
-  max-width: 17.5rem;
-  height: calc(100vh - var(--header-height));
-  background-color: var(--secondary);
-  padding: var(--gutter-lg);
-}
-
 .accounts {
   display: flex;
   flex: 1;
@@ -21,8 +10,6 @@
   gap: var(--gutter-xl);
   container-name: accounts;
   container-type: inline-size;
-  margin-top: var(--gutter-xl);
-  margin-bottom: var(--gutter-xl);
 }
 
 .account {
