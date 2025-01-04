@@ -5,4 +5,5 @@
 
 .wrapper main {
   flex: 1;
+  padding: var(--gutter-xl);
 }
