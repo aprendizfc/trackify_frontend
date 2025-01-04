@@ -54,14 +54,14 @@
 
   &.iconButton {
     border: 1px solid var(--border);
-    background-color: #fafafa;
+    background-color: var(--ghost-white);
     padding: 0;
     transition:
       background-color 0.3s ease,
       border-color 0.3s ease;
 
     &:hover {
-      color: #fafafa;
+      color: var(--ghost-white);
       border-color: var(--primary);
       background-color: var(--primary);
     }
