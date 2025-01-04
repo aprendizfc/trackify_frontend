@@ -15,6 +15,7 @@
   --primary: #6246ea;
   --secondary: #d1d1e9;
   --tertiary: #e45858;
+  --success: #00a164;
   --text: #2b2c34;
   --white: #fffffe;
   --ghost-white: #fafafa;
@@ -23,7 +24,7 @@
 
   --font-light: 300;
   --font-normal: 400;
-  --font-semibold: 600;
+  --font-semibold: 500;
   --font-bold: 700;
 
   --font-xs: 0.75rem;
@@ -62,6 +63,7 @@ body {
   width: 100%;
   min-height: 100vh;
   height: 100vh;
+  color: var(--text);
   background-color: var(--white);
 }
 
