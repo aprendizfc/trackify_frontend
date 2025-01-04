@@ -1,4 +1,6 @@
 .aside {
+  position: sticky;
+  top: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -12,7 +14,7 @@
   align-items: center;
   color: var(--text);
   border-radius: var(--radius-sm);
-  border: solid 1px transparent;
+  border: 1px solid transparent;
   padding: var(--gutter);
   margin-bottom: var(--gutter);
 
@@ -26,27 +28,7 @@
 }
 
 .navActiveLink {
-  border: solid 1px var(--border);
-  background-color: white;
+  border: 1px solid var(--border);
+  background-color: var(--white);
   box-shadow: var(--card-shadow);
 }
-
-/* .aside nav a {
-  display: flex;
-  align-items: center;
-  color: var(--text);
-  border-radius: var(--radius-sm);
-  border: solid 1px transparent;
-  padding: var(--gutter-sm);
-  margin-bottom: var(--gutter);
-
-  &:global.active {
-    border: solid 1px var(--border);
-    background-color: white;
-    box-shadow: var(--card-shadow);
-  }
-
-  &:hover {
-    text-decoration: none;
-  }
-} */
