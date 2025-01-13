@@ -6,7 +6,7 @@ import { formatMoney } from '../../js/utils/formatMoney/formatMoney'
 
 export default function Accounts() {
   const accounts = useMemo(() => {
-    return Array.from({ length: 500 }, (v, k) => k).map((account) => (
+    return Array.from({ length: 500 }, (_, k) => k).map((account) => (
       <Link to={String(account)} className={styles.account} key={account}>
         <span className={styles.accountHeader}>
           <span className={styles.accountName}>Cash</span>
