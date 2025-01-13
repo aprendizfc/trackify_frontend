@@ -1,0 +1,5 @@
+.errorMessage {
+  font-size: var(--font-xs);
+  color: var(--tertiary);
+  margin-top: var(--gutter-sm);
+}
