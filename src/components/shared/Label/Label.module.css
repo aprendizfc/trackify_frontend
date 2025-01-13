@@ -3,4 +3,9 @@
   width: 100%;
   font-size: var(--font-sm);
   font-weight: var(--font-semibold);
+
+  .required {
+    color: var(--tertiary);
+    margin-left: 2px;
+  }
 }
