@@ -13,6 +13,7 @@ export default function Button({
   iconPosition = 'left',
   srText,
   srTextPosition = 'left',
+  isDisabled,
   ...rest
 }: ButtonProps) {
   const hasIconAndContent: boolean = !!children && !!icon
@@ -20,6 +21,7 @@ export default function Button({
   return (
     <button
       {...rest}
+      disabled={isDisabled}
       className={cx(styles.button, className, {
         [styles.primaryButton]: variant === 'primary',
         [styles.unstyledButton]: variant === 'unstyled',
