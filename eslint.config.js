@@ -4,6 +4,7 @@ import reactHooks from 'eslint-plugin-react-hooks'
 import reactRefresh from 'eslint-plugin-react-refresh'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
+import queryPlugin from '@tanstack/eslint-plugin-query'
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -21,6 +22,7 @@ export default [
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,
+      query: queryPlugin,
     },
     rules: {
       ...reactHooks.configs.recommended.rules,
@@ -41,7 +43,7 @@ export default [
       'no-confusing-arrow': ['warn', { allowParens: true }],
       'no-return-assign': 'warn',
       'no-trailing-spaces': ['warn', { skipBlankLines: true, ignoreComments: false }],
-      'spaced-comment': ['warn', 'always', { markers: ["/"] }],
+      'spaced-comment': ['warn', 'always', { markers: ['/'] }],
       'lines-between-class-members': 'error',
       'no-else-return': 'warn',
       'no-loss-of-precision': 'warn',
