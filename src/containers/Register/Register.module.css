@@ -1,6 +1,6 @@
 .container {
-  width: 400px;
-  background-color: var(--secondary);
+  width: 500px;
+  background-color: var(--white);
   border-radius: var(--radius-sm);
   padding: 2.5rem;
 }
