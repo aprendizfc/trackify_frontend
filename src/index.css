@@ -4,38 +4,17 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-family: 'Work Sans', sans-serif;
   font-optical-sizing: auto;
-  font-weight: var(--font-normal);
   font-style: normal;
   line-height: 1.5;
-  font-weight: 400;
+
+  @apply font-normal;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --primary: #6246ea;
-  --secondary: #d1d1e9;
-  --tertiary: #e45858;
-  --success: #00a164;
   --text: #2b2c34;
-  --white: #fffffe;
-  --ghost-white: #fafafa;
-  --border: #d1d5db;
-  --main: #eff0f2;
-
-  --font-light: 300;
-  --font-normal: 400;
-  --font-semibold: 500;
-  --font-bold: 700;
-
-  --font-xs: 0.75rem;
-  --font-sm: 0.875rem;
-  --font-md: 1rem;
-
-  --button-sm: 2rem;
-  --button-md: 2.5rem;
-  --button-lg: 3rem;
 
   --input-shadow: 0 0 0 var(--gutter-sm);
 
@@ -43,14 +22,8 @@
 
   --header-height: 75px;
 
-  --radius: 0.5rem;
-  --radius-sm: calc(var(--radius) / 2);
-  --radius-lg: calc(var(--radius) * 2);
-
   --gutter: 0.5rem;
   --gutter-sm: calc(var(--gutter) / 2);
-  --gutter-lg: calc(var(--gutter) * 2);
-  --gutter-xl: calc(var(--gutter) * 3);
 }
 
 *,
@@ -65,26 +38,10 @@ body {
   width: 100%;
   min-height: 100vh;
   height: 100vh;
-  color: var(--text);
-  background-color: var(--white);
+  @apply bg-white text-gray-900;
 }
 
 body > div {
   width: inherit;
   height: inherit;
 }
-
-/* a {
-  text-decoration: none;
-}
-
-a:hover {
-  opacity: 0.9;
-  text-decoration: underline;
-} */
-
-/* a:focus,
-button:focus {
-  outline: solid 2px var(--primary);
-  outline-offset: 2px;
-} */
