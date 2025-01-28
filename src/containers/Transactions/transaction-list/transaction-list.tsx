@@ -1,5 +1,6 @@
 import { compareAsc, format, isToday, isYesterday, parse } from 'date-fns'
 import { TransactionListItem } from '../transaction-list-item/transaction-list-item'
+import { groupBy } from './group-by'
 import type { Transaction } from '../types'
 
 interface TransactionListProps {
@@ -12,10 +13,8 @@ export function TransactionList({ transactions }: TransactionListProps) {
   const sortedTransactions: Transaction[] = [...transactions].sort((a, b) =>
     compareAsc(new Date(b.date), new Date(a.date))
   )
-  const groupedTransactions: Partial<Record<string, Transaction[]>> = Object.groupBy(
-    sortedTransactions,
-    (transaction) => transaction.date
-  )
+
+  const groupedTransactions = groupBy(sortedTransactions, 'date')
 
   return (
     <ul role="list">
