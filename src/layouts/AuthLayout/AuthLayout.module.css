@@ -1,7 +1,0 @@
-.container {
-  display: grid;
-  place-content: center;
-  width: inherit;
-  height: inherit;
-  background-color: rgb(from var(--secondary) r g b / 0.4);
-}
