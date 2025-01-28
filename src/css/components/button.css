@@ -1,0 +1,57 @@
+@layer components {
+  .btn {
+    @apply text-sm inline-flex items-center justify-center font-medium rounded-sm border border-transparent align-middle cursor-pointer transition duration-300 ease-in-out outline-offset-2 outline-primary-500 focus:outline-2;
+  }
+
+  .btn-inner-wrapper {
+    @apply flex items-center justify-center pointer-events-none self-center flex-wrap max-w-full flex-auto;
+
+    &.has-gap {
+      @apply gap-2;
+    }
+  }
+
+  .btn-content {
+    @apply flex items-center justify-center;
+  }
+
+  .btn-icon-content svg {
+    @apply w-4 h-4;
+  }
+
+  .btn-sm {
+    @apply min-w-8 px-3 h-8;
+  }
+
+  .btn-md {
+    @apply min-w-10 px-6 h-10;
+  }
+
+  .btn-lg {
+    @apply min-w-12 px-6 h-12;
+  }
+
+  .btn-fit-container {
+    @apply w-full;
+  }
+
+  .btn-disabled {
+    @apply disabled:opacity-50 cursor-not-allowed;
+  }
+
+  .btn-primary {
+    @apply text-white bg-primary-500 hover:not-disabled:bg-primary-600;
+  }
+
+  .btn-secondary {
+    @apply text-primary-500 bg-white border-gray-300 hover:not-disabled:text-white hover:not-disabled:bg-primary-500 hover:not-disabled:border-transparent;
+  }
+
+  .btn-subtle {
+    @apply bg-transparent hover:not-disabled:bg-gray-100 focus:bg-gray-100;
+  }
+
+  .btn-icon {
+    @apply border text-gray-950 bg-gray-50 border-gray-300 px-0 hover:not-disabled:text-white hover:not-disabled:bg-primary-500 hover:not-disabled:border-transparent;
+  }
+}

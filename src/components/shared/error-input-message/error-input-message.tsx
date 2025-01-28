@@ -1,5 +1,3 @@
-import * as styles from './error-input-message.module.css'
-
 interface ErrorInputMessageProps {
   message: React.ReactNode
   id: string
@@ -7,7 +5,7 @@ interface ErrorInputMessageProps {
 
 export function ErrorInputMessage({ message, id }: ErrorInputMessageProps) {
   return (
-    <div id={`error-${id}`} className={styles.errorMessage}>
+    <div id={`error-${id}`} className="text-xs mt-1 text-red-600">
       {message}
     </div>
   )

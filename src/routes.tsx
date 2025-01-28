@@ -6,6 +6,7 @@ import Accounts from './containers/Accounts/Accounts'
 import AuthLayout from './layouts/AuthLayout/AuthLayout'
 import HomeLayout from './layouts/HomeLayout/HomeLayout'
 import Transactions from './containers/Transactions/Transactions'
+import CreateTransaction from './containers/create-transactions/create-transactions'
 
 export default function AppRoutes() {
   return (
@@ -18,7 +19,9 @@ export default function AppRoutes() {
       <Route element={<HomeLayout />}>
         <Route index element={<p>Dashboard</p>} />
         <Route path="accounts" element={<Accounts />} />
-        <Route path="transactions" element={<Transactions />} />
+        <Route path="transactions" element={<Transactions />}>
+          <Route path="create" element={<CreateTransaction />} />
+        </Route>
       </Route>
     </Routes>
   )

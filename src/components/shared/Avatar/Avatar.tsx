@@ -1,4 +1,3 @@
-import * as styles from './Avatar.module.css'
 import AvatarInitials from './AvatarInitials/AvatarInitials'
 import type { AvatarProps } from './Avatar.types'
 import AvatarImage from './AvatarImage/AvatarImage'
@@ -11,7 +10,7 @@ export default function Avatar({
   shape = 'round',
 }: AvatarProps) {
   return (
-    <div className={styles.avatarWrapper}>
+    <div className="inline-flex">
       {initials && <AvatarInitials initials={initials} shape={shape} size={size} />}
 
       {img && altText && (

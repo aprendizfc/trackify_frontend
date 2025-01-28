@@ -1,7 +1,6 @@
 import cx from '../../../js/utils/classNames/classNames'
 import { ErrorInputMessage } from '../error-input-message/error-input-message'
 import Label from '../Label/Label'
-import * as styles from './TextField.module.css'
 
 export interface TextFieldProps extends React.ComponentProps<'input'> {
   id: string
@@ -27,17 +26,17 @@ export default function TextField({
   return (
     <div
       className={cx({
-        [styles.textFieldOuterContainer]: !isInline,
-        [styles.textFieldInlineOuterContainer]: isInline,
+        'textfield-outer-container': !isInline,
+        'textfield-outer-inline-container': isInline,
       })}
     >
-      <div className={styles.textFieldLabelWrapper}>
+      <div className="textfield-label-wrapper">
         <Label htmlFor={id} isVisible={isLabelVisible} isRequired={isRequired}>
           {label}
         </Label>
       </div>
 
-      <div className={styles.textFieldWrapper}>
+      <div className="textfield-container">
         <input
           {...rest}
           aria-invalid={!!errorMessage}
@@ -46,7 +45,7 @@ export default function TextField({
           })}
           required={isRequired}
           id={id}
-          className={cx(styles.textField, className)}
+          className={cx('textfield', className)}
         />
 
         {errorMessage && <ErrorInputMessage message={errorMessage} id={id} />}

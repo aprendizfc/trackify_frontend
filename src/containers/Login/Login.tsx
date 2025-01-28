@@ -1,33 +1,37 @@
-import { Link } from 'react-router'
+import { Link } from '@/components/shared/link/link'
+import { Heading } from '@/components/shared/heading/heading'
 import Button from '../../components/shared/Button/Button'
 import Stack from '../../components/shared/Stack/Stack'
 import TextField from '../../components/shared/TextField/TextField'
-import * as styles from './Login.module.css'
 import ExistingAccount from '../../components/shared/ExistingAccount/ExistingAccount'
 
 export default function Login() {
   return (
-    <>
-      <h1>Login</h1>
+    <div className="w-full sm:w-100">
+      <Heading appearance="h2" className="mb-10">
+        Login
+      </Heading>
 
-      <div className={styles.container}>
+      <div className="bg-white rounded-sm p-10">
         <form action="">
           <Stack>
             <TextField label="Email" id="email" name="email" />
 
             <TextField label="Password" id="password" name="password" type="password" />
 
-            <Button size="full" type="submit">
+            <Button shouldFitContainer type="submit">
               Sign In
             </Button>
           </Stack>
 
           <ExistingAccount>
             Don't have an account?
-            <Link to="/register">Sign Up</Link>
+            <Link to="/register" className="font-medium">
+              Sign Up
+            </Link>
           </ExistingAccount>
         </form>
       </div>
-    </>
+    </div>
   )
 }

@@ -1,8 +1,6 @@
 import cx from '../../../js/utils/classNames/classNames'
-import { VisuallyHidden } from '../VisuallyHidden/VisuallyHidden'
-import { Icon } from './Icon'
 import type { ButtonProps } from './Button.types'
-import * as styles from './Button.module.css'
+import { ButtonContent } from '../button-content/button-content'
 
 export default function Button({
   children,
@@ -14,43 +12,28 @@ export default function Button({
   srText,
   srTextPosition = 'left',
   isDisabled,
+  shouldFitContainer,
+  type = 'button',
   ...rest
 }: ButtonProps) {
-  const hasIconAndContent: boolean = !!children && !!icon
-
   return (
     <button
       {...rest}
+      type={type}
       disabled={isDisabled}
-      className={cx(styles.button, className, {
-        [styles.primaryButton]: variant === 'primary',
-        [styles.unstyledButton]: variant === 'unstyled',
-        [styles.iconButton]: variant === 'icon',
-        [styles.SMButton]: size === 'sm',
-        [styles.MDButton]: size === 'md',
-        [styles.LGButton]: size === 'lg',
-        [styles.fullButton]: size === 'full',
+      className={cx(`btn btn-${variant} btn-${size}`, className, {
+        'btn-disabled': isDisabled,
+        'btn-fit-container': shouldFitContainer,
       })}
     >
-      <span
-        className={cx(styles.buttonInnerWrapper, { [styles.hasIcon]: hasIconAndContent })}
+      <ButtonContent
+        icon={icon}
+        iconPosition={iconPosition}
+        srText={srText}
+        srTextPosition={srTextPosition}
       >
-        {icon && iconPosition === 'left' && <Icon icon={icon} />}
-
-        <span className={styles.buttonContent}>
-          {srText && srTextPosition === 'left' && (
-            <VisuallyHidden>{srText}</VisuallyHidden>
-          )}
-
-          {children}
-
-          {srText && srTextPosition === 'right' && (
-            <VisuallyHidden>{srText}</VisuallyHidden>
-          )}
-        </span>
-
-        {icon && iconPosition === 'right' && <Icon icon={icon} />}
-      </span>
+        {children}
+      </ButtonContent>
     </button>
   )
 }

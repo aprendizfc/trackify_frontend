@@ -1,7 +1,6 @@
 import { compareAsc, format, isToday, isYesterday, parse } from 'date-fns'
 import { TransactionListItem } from '../transaction-list-item/transaction-list-item'
 import type { Transaction } from '../types'
-import * as styles from './transaction-list.module.css'
 
 interface TransactionListProps {
   transactions: Transaction[]
@@ -19,7 +18,7 @@ export function TransactionList({ transactions }: TransactionListProps) {
   )
 
   return (
-    <ul className={styles.transactionList}>
+    <ul role="list">
       {Object.entries(groupedTransactions).map(([date, records]) => {
         const d: Date = parse(date, 'yyyy-MM-dd', new Date())
         let distance: string = ''
@@ -34,7 +33,7 @@ export function TransactionList({ transactions }: TransactionListProps) {
 
         return (
           <div key={date}>
-            <div className={styles.transactionStickyHeader}>
+            <div className="transaction-item-header">
               <span>{distance}</span>
             </div>
             {records?.map((record) => (
@@ -43,9 +42,6 @@ export function TransactionList({ transactions }: TransactionListProps) {
           </div>
         )
       })}
-      {/* {transactions.map((transaction) => (
-        <TransactionListItem key={transaction.id} transaction={transaction} />
-      ))} */}
     </ul>
   )
 }

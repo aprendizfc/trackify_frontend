@@ -1,0 +1,12 @@
+@layer components {
+  a,
+  link {
+    @apply text-primary-500;
+
+    &:hover:not(.btn, .nav-link) {
+      @media (hover: hover) {
+        @apply underline;
+      }
+    }
+  }
+}

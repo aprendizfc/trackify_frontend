@@ -1,5 +1,4 @@
 import classNames from '../../../js/utils/classNames/classNames'
-import * as styles from './Stack.module.css'
 
 export interface StackProps extends React.ComponentProps<'div'> {
   gutter?: 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl' | 'xxl'
@@ -8,14 +7,14 @@ export interface StackProps extends React.ComponentProps<'div'> {
 export default function Stack({ children, gutter = 'md' }: StackProps) {
   return (
     <div
-      className={classNames(styles.trackifyStack, {
-        [styles.trackifyStackXXS]: gutter === 'xxs',
-        [styles.trackifyStackXS]: gutter === 'xs',
-        [styles.trackifyStackSM]: gutter === 'sm',
-        [styles.trackifyStackMD]: gutter === 'md',
-        [styles.trackifyStackLG]: gutter === 'lg',
-        [styles.trackifyStackXL]: gutter === 'xl',
-        [styles.trackifyStackXXL]: gutter === 'xxl',
+      className={classNames('flex flex-col justify-start', {
+        'gap-1': gutter === 'xxs',
+        'gap-2': gutter === 'xs',
+        'gap-3': gutter === 'sm',
+        'gap-5': gutter === 'md',
+        'gap-8': gutter === 'lg',
+        'gap-12': gutter === 'xl',
+        'gap-16': gutter === 'xxl',
       })}
     >
       {children}

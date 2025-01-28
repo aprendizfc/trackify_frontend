@@ -1,13 +1,12 @@
 import { Outlet } from 'react-router'
 import { Aside } from './Aside/Aside'
-import * as styles from './HomeLayout.module.css'
 
 export default function HomeLayout() {
   return (
-    <div className={styles.wrapper}>
+    <div className="flex bg-gray-50">
       <Aside />
 
-      <main>
+      <main className="flex-1 p-6">
         <Outlet />
       </main>
     </div>

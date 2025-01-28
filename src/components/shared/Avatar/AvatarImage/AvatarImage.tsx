@@ -1,7 +1,5 @@
 import cx from '../../../../js/utils/classNames/classNames'
 import type { AvatarImageProps } from '../Avatar.types'
-import avatarStyles from '../Avatar.module.css'
-import * as styles from './AvatarImage.module.css'
 
 export default function AvatarImage({
   img,
@@ -9,10 +7,20 @@ export default function AvatarImage({
   size = 'md',
   shape = 'round',
 }: AvatarImageProps) {
-  const avatarSize = `size-${size}`
   return (
-    <div className={cx(styles.container, avatarStyles[avatarSize], avatarStyles[shape])}>
-      <img src={img} alt={altText} />
+    <div
+      className={cx('inline-flex', {
+        'size-6': size === 'xs',
+        'size-8': size === 'sm',
+        'size-10': size === 'md',
+        'size-20': size === 'lg',
+        'size-36': size === 'xl',
+        'rounded-full': shape === 'round',
+        'rounded-sm': shape === 'rounded',
+        'rounded-none': shape === 'square',
+      })}
+    >
+      <img src={img} alt={altText} className="w-full rounded-full" />
     </div>
   )
 }

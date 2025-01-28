@@ -1,0 +1,15 @@
+@layer components {
+  .nav-link {
+    @apply flex items-center gap-2 text-gray-950 rounded-sm border border-transparent p-2 mb-2 transition-[border,background-color] duration-300;
+
+    &:hover {
+      @media (hover: hover) {
+        @apply no-underline;
+      }
+    }
+
+    &.active {
+      @apply bg-white border border-gray-300;
+    }
+  }
+}

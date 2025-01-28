@@ -1,0 +1,13 @@
+@layer components {
+  .header {
+    @apply flex items-center justify-between sticky top-0 w-full h-(--header-height) bg-gray-50 z-11;
+
+    &[data-stuck='true'] {
+      @apply border-b border-gray-300;
+    }
+
+    .actions {
+      @apply inline-flex gap-6;
+    }
+  }
+}

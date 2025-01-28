@@ -1,6 +1,5 @@
 import cx from '../../../js/utils/classNames/classNames'
 import { VisuallyHidden } from '../VisuallyHidden/VisuallyHidden'
-import * as styles from './Label.module.css'
 
 export interface LabelProps extends React.ComponentProps<'label'> {
   isVisible?: boolean
@@ -17,14 +16,14 @@ export default function Label({
   return (
     <label
       htmlFor={htmlFor}
-      className={cx(styles.label, className, { 'sr-only': !isVisible })}
+      className={cx('label', className, { 'sr-only': !isVisible })}
     >
       {children}
 
       {isRequired && (
-        <abbr className={styles.required}>
+        <abbr className="required">
           <span aria-hidden="true">*</span>
-          <VisuallyHidden>Required</VisuallyHidden>
+          <VisuallyHidden> (Required) </VisuallyHidden>
         </abbr>
       )}
     </label>

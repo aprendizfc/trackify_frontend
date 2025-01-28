@@ -1,25 +1,22 @@
-import { NavLink } from 'react-router'
-import * as styles from './Header.module.css'
-import Container from '../Container/Container'
-import Avatar from '../Avatar/Avatar'
+import * as React from 'react'
+import { useStuck } from './hooks/useStuck'
+import { Heading } from '../heading/heading'
 
-export default function Header() {
+interface HeaderProps extends React.ComponentProps<'header'> {
+  headingText: string
+  actions?: React.ReactElement
+}
+
+export default function Header({ headingText, actions, ...rest }: HeaderProps) {
+  const headerRef = React.useRef<HTMLHeadElement>(null)
+
+  const { isStuck } = useStuck(headerRef)
+
   return (
-    <header className={styles.header}>
-      <Container>
-        <div className={styles.headerWrapper}>
-          <nav className={styles.nav}>
-            <NavLink to="/">Dashboard</NavLink>
-            <NavLink to="/accounts">Accounts</NavLink>
-            <NavLink to="/records">Records</NavLink>
-          </nav>
+    <header {...rest} data-stuck={isStuck} ref={headerRef} className="header">
+      <Heading appearance="h2">{headingText}</Heading>
 
-          <Avatar
-            img="https://mighty.tools/mockmind-api/content/cartoon/32.jpg"
-            altText="Gravatar"
-          />
-        </div>
-      </Container>
+      {actions && <div className="actions">{actions}</div>}
     </header>
   )
 }

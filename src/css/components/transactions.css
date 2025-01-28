@@ -1,0 +1,29 @@
+@layer components {
+  .transaction-item-header {
+    @apply sticky top-(--header-height) bg-gray-50 p-2.5 z-10;
+  }
+
+  .transaction {
+    @apply flex items-center justify-between border border-gray-300 rounded-sm bg-white px-4 py-2;
+
+    &:not(:last-of-type) {
+      @apply mb-4;
+    }
+
+    .transaction-income {
+      @apply text-green-600 text-emerald-600;
+    }
+
+    .transaction-expense {
+      @apply text-red-600;
+    }
+
+    .transaction-info {
+      @apply inline-flex items-center gap-4;
+    }
+
+    .transaction-amount {
+      @apply inline-flex flex-col items-end;
+    }
+  }
+}

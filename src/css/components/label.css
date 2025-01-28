@@ -1,0 +1,9 @@
+@layer components {
+  .label {
+    @apply inline-block w-full text-sm font-medium;
+
+    .required {
+      @apply text-red-600 ml-0.5;
+    }
+  }
+}

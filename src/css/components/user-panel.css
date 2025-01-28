@@ -1,0 +1,9 @@
+@layer components {
+  .user-panel {
+    @apply flex items-center justify-between gap-2 w-full h-18 bg-gray-900/5 rounded-lg p-2;
+
+    .user-info {
+      @apply flex items-center gap-2;
+    }
+  }
+}

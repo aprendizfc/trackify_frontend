@@ -1,7 +1,5 @@
 import { formatMoney } from '@/js/utils/formatMoney/formatMoney'
-import cx from '@/js/utils/classNames/classNames'
 import type { Transaction } from '../types'
-import * as styles from './transaction-list-item.module.css'
 
 type Operation = '+' | '-'
 
@@ -14,12 +12,7 @@ export function TransactionAmount({ amount, type }: TransactionAmountProps) {
   const operation: Operation = type === 'income' ? '+' : '-'
 
   return (
-    <span
-      className={cx(styles.transactionAmount, {
-        [styles.transactionExpense]: type === 'expense',
-        [styles.transactionIncome]: type === 'income',
-      })}
-    >
+    <span className={`font-medium transaction-${type}`}>
       {operation}
       {formatMoney(amount)}
     </span>

@@ -1,16 +1,16 @@
-import { Link } from 'react-router'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from '@hookform/resolvers/yup'
+import { Link } from '@/components/shared/link/link'
 import { Col } from '@/components/shared/grid/col/col'
 import { Row } from '@/components/shared/grid/row/row'
 import Button from '@/components/shared/Button/Button'
 import Stack from '@/components/shared/Stack/Stack'
 import TextField from '@/components/shared/TextField/TextField'
 import ExistingAccount from '@/components/shared/ExistingAccount/ExistingAccount'
+import { Heading } from '@/components/shared/heading/heading'
 import { useSignUp } from './hooks/use-sign-up'
 import { registerSchema } from './schema/register-schema'
 import { RegisterData } from './register-types'
-import * as styles from './Register.module.css'
 
 export default function Register() {
   const { signUpMutation } = useSignUp()
@@ -25,10 +25,12 @@ export default function Register() {
   }
 
   return (
-    <>
-      <h1>Register</h1>
+    <div className="w-full sm:w-125">
+      <Heading appearance="h2" className="mb-10">
+        Register
+      </Heading>
 
-      <div className={styles.container}>
+      <div className="bg-white rounded-sm p-10">
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <Stack>
             <Row>
@@ -80,17 +82,24 @@ export default function Register() {
               errorMessage={errors.confirmPassword?.message}
             />
 
-            <Button size="full" type="submit" isDisabled={signUpMutation.isPending}>
+            <Button
+              shouldFitContainer
+              className="mt-2"
+              type="submit"
+              isDisabled={signUpMutation.isPending}
+            >
               Sign Up
             </Button>
           </Stack>
 
           <ExistingAccount>
             Have an account?
-            <Link to="/login">Sign In</Link>
+            <Link to="/login" className="font-medium">
+              Sign In
+            </Link>
           </ExistingAccount>
         </form>
       </div>
-    </>
+    </div>
   )
 }

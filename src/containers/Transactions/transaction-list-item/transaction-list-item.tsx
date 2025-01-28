@@ -2,7 +2,6 @@ import { Text } from '@/components/shared/Text/Text'
 import { TransactionTypeIcon } from './transaction-type-icon'
 import { TransactionAmount } from './transaction-amount'
 import type { Transaction } from '../types'
-import * as styles from './transaction-list-item.module.css'
 import { TransactionDateCategory } from './transaction-date-category'
 
 interface TransactionListItemProps extends React.ComponentProps<'li'> {
@@ -11,8 +10,8 @@ interface TransactionListItemProps extends React.ComponentProps<'li'> {
 
 export function TransactionListItem({ transaction }: TransactionListItemProps) {
   return (
-    <li className={styles.transaction}>
-      <div className={styles.transactionInfoWrapper}>
+    <li className="transaction">
+      <div className="transaction-info">
         <TransactionTypeIcon type={transaction.type} />
 
         <div>
@@ -25,9 +24,9 @@ export function TransactionListItem({ transaction }: TransactionListItemProps) {
         </div>
       </div>
 
-      <div className={styles.transactionAmountWrapper}>
+      <div className="transaction-amount">
         <TransactionAmount amount={transaction.amount} type={transaction.type} />
-        <Text size="sm" color="secondary">
+        <Text size="sm" variant="secondary">
           {transaction.account}
         </Text>
       </div>
