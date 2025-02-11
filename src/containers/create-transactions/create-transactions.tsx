@@ -13,7 +13,13 @@ export default function CreateTransaction() {
   }
 
   return (
-    <Modal title="Add Transaction" onClose={handleClose}>
+    <Modal
+      isOpen={true}
+      title="Add Transaction"
+      onClose={handleClose}
+      closeOnOverlayClick={true}
+      shouldCloseOnEsc={true}
+    >
       <form style={{ width: 400 }}>
         <a href="/asd">hola</a>
         <TextField
@@ -26,7 +32,9 @@ export default function CreateTransaction() {
 
       <ModalActions>
         <ButtonGroup align="right">
-          <Button variant="secondary">Cancel</Button>
+          <Button variant="secondary" onClick={handleClose}>
+            Cancel
+          </Button>
           <Button>Save</Button>
         </ButtonGroup>
       </ModalActions>
