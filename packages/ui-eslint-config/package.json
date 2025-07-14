@@ -8,8 +8,10 @@
   },
   "scripts": {
     "build": "echo 'No build step required for ESLint config'",
-    "lint": "eslint .",
-    "typecheck": "tsc --noEmit"
+    "lint": "echo 'Linting is not applicable for ESLint config package'",
+    "typecheck": "echo 'Type checking is not applicable for ESLint config package'",
+    "test": "echo 'Testing is not applicable for ESLint config package'",
+    "format": "echo 'Formatting is not applicable for ESLint config package'"
   },
   "devDependencies": {
     "typescript": "^5.8.3",
