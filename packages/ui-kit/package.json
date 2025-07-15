@@ -1,0 +1,21 @@
+{
+  "name": "@trackify/ui-kit",
+  "version": "0.1.0",
+  "private": true,
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "lint": "pnpm run format:check && pnpm run lint:check",
+    "lint:check": "npx eslint --max-warnings 10 './src/**/*'",
+    "lint:fix": "npx eslint --fix './src/**/*'",
+    "format": "pnpm run format:check",
+    "format:check": "npx prettier --check './src/**/*.{js,jsx,ts,tsx,css}'",
+    "format:fix": "npx prettier --list-different --write './src/**/*.{js,jsx,ts,tsx,css}'",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest"
+  }
+}
