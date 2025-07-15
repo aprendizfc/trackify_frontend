@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 
-import App from './App'
+import App from './app.component'
 
 describe('App', () => {
   it('renders properly', () => {
