@@ -60,12 +60,11 @@ importers:
       typescript:
         specifier: ^5.8.3
         version: 5.8.3
+      vitest:
+        specifier: ^3.2.4
+        version: 3.2.4(@types/node@24.0.13)(jiti@2.4.2)(jsdom@26.1.0)(lightningcss@1.30.1)
 
   apps/web:
-    dependencies:
-      '@trackify/ui-kit':
-        specifier: workspace:^
-        version: link:../../packages/ui-kit
     devDependencies:
       '@tailwindcss/vite':
         specifier: ^4.1.11
@@ -76,9 +75,6 @@ importers:
       vite:
         specifier: ^7.0.4
         version: 7.0.4(@types/node@24.0.13)(jiti@2.4.2)(lightningcss@1.30.1)
-      vitest:
-        specifier: ^3.2.4
-        version: 3.2.4(@types/node@24.0.13)(jiti@2.4.2)(jsdom@26.1.0)(lightningcss@1.30.1)
 
   packages/ui-eslint-config:
     dependencies:
