@@ -1,0 +1,35 @@
+{
+  "name": "@trackify/ui-eslint-config",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "scripts": {
+    "build": "echo 'No build step required for ESLint config'",
+    "lint": "echo 'Linting is not applicable for ESLint config package'",
+    "typecheck": "echo 'Type checking is not applicable for ESLint config package'",
+    "test": "echo 'Testing is not applicable for ESLint config package'",
+    "format": "echo 'Formatting is not applicable for ESLint config package'"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3",
+    "eslint": "^9.31.0",
+    "prettier": "^3.6.2"
+  },
+  "peerDependencies": {
+    "eslint": "^9.0.0",
+    "typescript": "^5.0.0",
+    "@eslint/js": "^9.0.0",
+    "typescript-eslint": "^8.0.0",
+    "eslint-config-prettier": "^10.0.0",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-perfectionist": "^4.0.0",
+    "eslint-plugin-react": "^7.0.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.0",
+    "@tanstack/eslint-plugin-query": "^5.0.0",
+    "globals": "^16.0.0"
+  }
+}

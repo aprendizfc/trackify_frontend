@@ -1,28 +1,39 @@
 name: lint-and-test
+
 on:
   pull_request:
+
 jobs:
   lint-and-test:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Action
+      - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Install pnpm
+
+      - name: Setup PNPM
         uses: pnpm/action-setup@v4
-        with:
-          version: 9
-      - name: Setup NodeJS
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
           cache: 'pnpm'
-      - name: Setup dependencies
+
+      - name: Install dependencies
         run: pnpm install --frozen-lockfile
-      - name: Lint
+
+      - name: Type checking
         run: |
-          echo 'Linting App'
-          pnpm run lint
-      - name: Test
+          echo "🧠 Type checking..."
+          pnpm turbo run typecheck --cache-dir=".turbo"
+
+      - name: Lint all apps/packages
         run: |
-          echo 'Testing App'
-          pnpm run test
+          echo "🔍 Linting apps/packages..."
+          pnpm turbo run lint --cache-dir=".turbo"
+
+      - name: Run tests
+        run: |
+          echo "🧪 Testing apps/packages..."
+          pnpm turbo run test --cache-dir=".turbo"
