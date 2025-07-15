@@ -10,6 +10,7 @@ const rule = {
       'machine',
       'context',
       'provider',
+      'd',
     ]
     const suffixPattern = `\\.(${validSuffixes.join('|')})$`
 
