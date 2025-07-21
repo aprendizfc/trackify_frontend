@@ -13,12 +13,19 @@ const rule = {
       'd',
     ]
     const suffixPattern = `\\.(${validSuffixes.join('|')})$`
+    const options = context.options[0] || {}
+    const ignoreDirs = options.ignoreDirs || []
 
     return {
       Program(node) {
         const filePathName = context.getFilename()
         const fileName = filePathName.split('/').pop() || ''
         const baseFileName = fileName.split('.')[0]
+
+        // 🔒 Skip explicitly ignored directories
+        if (ignoreDirs.some((dir) => filePathName.includes(`/${dir}/`))) {
+          return
+        }
 
         // Skip index files for now. Barrel files will be deprecated in the future.
         if (!fileName || baseFileName === 'index' || baseFileName === 'main') return
@@ -54,7 +61,21 @@ const rule = {
       recommended: true,
     },
     fixable: null,
-    schema: [],
+    schema: [
+      {
+        type: 'object',
+        properties: {
+          ignoreDirs: {
+            type: 'array',
+            items: {
+              type: 'string',
+            },
+            description: 'Directories to ignore when checking filenames',
+          },
+        },
+        additionalProperties: false,
+      },
+    ],
     type: 'problem',
   },
 }
