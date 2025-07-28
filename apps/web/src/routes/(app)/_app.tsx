@@ -1,6 +1,7 @@
 import type { LinkProps } from '@tanstack/react-router'
 
 import { createFileRoute, Link, Outlet } from '@tanstack/react-router'
+import { Container } from '@trackify/ui-kit'
 import { CreditCard, Home, Layers } from 'react-feather'
 
 type LinkWithIconProps = LinkProps & {
@@ -49,7 +50,9 @@ const AppLayout: React.FC = () => {
       </div>
 
       <div className="flex-1 p-4">
-        <Outlet />
+        <Container>
+          <Outlet />
+        </Container>
       </div>
     </div>
   )
