@@ -9,6 +9,9 @@
       "import": "./src/index.ts"
     }
   },
+  "dependencies": {
+    "@trackify/ui-helpers": "workspace:*"
+  },
   "scripts": {
     "lint": "pnpm run format:check && pnpm run lint:check",
     "lint:check": "npx eslint --max-warnings 10 './src/**/*'",
