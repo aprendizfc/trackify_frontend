@@ -1,14 +1,44 @@
-interface ButtonProps extends React.ComponentProps<'button'> {
-  children: React.ReactNode
-}
+import { Slot } from '@radix-ui/react-slot'
+import { cn } from '@trackify/ui-helpers'
+import React from 'react'
 
-export const Button: React.FC<ButtonProps> = ({ children, ...props }) => {
+import type { ButtonProps } from './button.type'
+
+import { ButtonIcon } from './button-icon.component'
+import { buttonVariants } from './button.helper'
+
+export const Button: React.FC<ButtonProps> = ({
+  adornment,
+  adornmentPosition = 'start',
+  appearance,
+  asChild,
+  children,
+  className,
+  ...props
+}) => {
+  const Component = asChild ? Slot : 'button'
+  const adornmentIsOnlyChild = !!(React.Children.count(children) === 0 && adornment)
+
   return (
-    <button
-      className={`rounded bg-blue-500 px-4 py-2 text-white hover:bg-blue-600 focus:ring-2 focus:ring-blue-400 focus:outline-none`}
+    <Component
+      data-slot="button"
       {...props}
+      className={cn(buttonVariants({ appearance, className }))}
     >
-      {children}
-    </button>
+      <span
+        className={cn('inline-flex items-center justify-center', {
+          absolute: adornmentIsOnlyChild,
+          'gap-2': !adornmentIsOnlyChild,
+        })}
+      >
+        {adornment && adornmentPosition === 'start' && (
+          <ButtonIcon adornment={adornment} />
+        )}
+
+        {children}
+
+        {adornment && adornmentPosition === 'end' && <ButtonIcon adornment={adornment} />}
+      </span>
+    </Component>
   )
 }

@@ -10,7 +10,9 @@
     }
   },
   "dependencies": {
-    "@trackify/ui-helpers": "workspace:*"
+    "@radix-ui/react-slot": "^1.2.3",
+    "@trackify/ui-helpers": "workspace:*",
+    "class-variance-authority": "^0.7.1"
   },
   "scripts": {
     "lint": "pnpm run format:check && pnpm run lint:check",

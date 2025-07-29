@@ -6,6 +6,6 @@
   "semi": false,
   "endOfLine": "lf",
   "plugins": ["prettier-plugin-tailwindcss"],
-  "tailwindFunctions": ["cn"],
+  "tailwindFunctions": ["cn", "cva"],
   "useTabs": false
 }
