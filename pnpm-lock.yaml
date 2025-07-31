@@ -78,6 +78,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@trackify/ui-home':
+        specifier: workspace:*
+        version: link:../../packages/ui-home
       '@trackify/ui-kit':
         specifier: workspace:*
         version: link:../../packages/ui-kit
@@ -140,6 +143,12 @@ importers:
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.3.1
+
+  packages/ui-home:
+    dependencies:
+      '@trackify/ui-kit':
+        specifier: workspace:*
+        version: link:../ui-kit
 
   packages/ui-kit:
     dependencies:
