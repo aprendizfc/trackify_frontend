@@ -19,4 +19,5 @@ body {
   min-height: 100vh;
   height: 100vh;
   @apply bg-white;
+  @apply text-zinc-800;
 }
