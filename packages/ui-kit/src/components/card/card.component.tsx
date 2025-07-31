@@ -1,8 +1,14 @@
+import { cn } from '@trackify/ui-helpers'
+
 import type { CardProps } from './card.type'
 
-export const Card: React.FC<CardProps> = ({ children, ...rest }) => {
+export const Card: React.FC<CardProps> = ({ children, className, ...rest }) => {
   return (
-    <div className="rounded-md shadow-(--shadow)" {...rest}>
+    <div
+      className={cn('flex flex-col rounded-md shadow-(--shadow)', className)}
+      data-slot="card"
+      {...rest}
+    >
       {children}
     </div>
   )
