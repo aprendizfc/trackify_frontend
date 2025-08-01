@@ -17,8 +17,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@trackify/ui-kit": "workspace:*",
-    "@trackify/ui-home": "workspace:*"
+    "@trackify/ui-kit": "workspace:*"
   },
   "devDependencies": {
     "@tailwindcss/vite": "^4.1.11",

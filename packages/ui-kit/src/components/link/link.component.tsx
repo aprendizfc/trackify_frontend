@@ -4,10 +4,14 @@ import type { LinkProps } from './link.type'
 
 import { Button } from '../button/button.component'
 
-export const Link: React.FC<LinkProps> = ({ rootProps, ...rest }) => {
-  return (
-    <Button asChild={true} {...rootProps}>
-      <RouterLink {...rest}>Home</RouterLink>
-    </Button>
-  )
+export const Link: React.FC<LinkProps> = ({ asButton, children, rootProps, ...rest }) => {
+  if (asButton) {
+    return (
+      <Button asChild={true} {...rootProps}>
+        <RouterLink {...rest}>{children}</RouterLink>
+      </Button>
+    )
+  }
+
+  return <RouterLink {...rest}>{children}</RouterLink>
 }
