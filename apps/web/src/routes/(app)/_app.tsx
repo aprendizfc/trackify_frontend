@@ -29,8 +29,8 @@ const links: LinkWithIconProps[] = [
 
 const AppLayout: React.FC = () => {
   return (
-    <div className="flex h-screen">
-      <div className="w-54 flex-col bg-gray-50">
+    <div className="flex h-full">
+      <div className="sticky top-0 h-screen w-54 flex-col bg-gray-50">
         <nav className="w-full">
           <ul className="flex flex-col gap-1">
             {links.map(({ icon: Icon, text, to, ...rest }) => (
@@ -49,11 +49,11 @@ const AppLayout: React.FC = () => {
         </nav>
       </div>
 
-      <div className="flex-1 p-4">
+      <main className="flex-1 p-4">
         <Container>
           <Outlet />
         </Container>
-      </div>
+      </main>
     </div>
   )
 }
