@@ -16,7 +16,8 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@trackify/ui-kit': path.resolve(__dirname, '../../packages/ui-kit/src'),
+      '@trackify/ui-kit/*': path.resolve(__dirname, '../../packages/ui-kit/src'),
+      '@': path.resolve(__dirname, './src'),
     },
   },
 })
