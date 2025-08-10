@@ -1,6 +1,6 @@
 import { cn } from '@trackify/ui-helpers'
 
-import type { CardActionProps } from './card.type'
+import type { CardActionProps } from '../types/card.type'
 
 export const CardAction: React.FC<CardActionProps> = ({
   children,

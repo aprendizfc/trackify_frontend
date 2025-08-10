@@ -1,6 +1,6 @@
 import { cn } from '@trackify/ui-helpers'
 
-import type { ButtonIconProps } from './button.type'
+import type { ButtonIconProps } from '../types/button.type'
 
 export const ButtonIcon: React.FC<ButtonIconProps> = ({ adornment, className }) => {
   return (

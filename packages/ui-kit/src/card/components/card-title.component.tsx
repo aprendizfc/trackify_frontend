@@ -1,6 +1,6 @@
 import { cn } from '@trackify/ui-helpers'
 
-import type { CardTitleProps } from './card.type'
+import type { CardTitleProps } from '../types/card.type'
 
 export const CardTitle: React.FC<CardTitleProps> = ({ children, className, ...rest }) => {
   return (

@@ -1,6 +1,6 @@
 import { cn } from '@trackify/ui-helpers'
 
-import type { CardProps } from './card.type'
+import type { CardProps } from '../types/card.type'
 
 export const Card: React.FC<CardProps> = ({ children, className, ...rest }) => {
   return (

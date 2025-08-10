@@ -2,10 +2,10 @@ import { Slot } from '@radix-ui/react-slot'
 import { cn } from '@trackify/ui-helpers'
 import React from 'react'
 
-import type { ButtonProps } from './button.type'
+import type { ButtonProps } from '../types/button.type'
 
+import { buttonVariants } from '../helpers/button.helper'
 import { ButtonIcon } from './button-icon.component'
-import { buttonVariants } from './button.helper'
 
 export const Button: React.FC<ButtonProps> = ({
   adornment,

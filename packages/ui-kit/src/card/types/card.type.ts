@@ -1,4 +1,4 @@
-import type { StackProps } from '../stack/stack.type'
+import type { StackProps } from '../../stack/types/stack.type'
 
 export interface CardProps extends React.ComponentProps<'div'> {
   children: React.ReactNode
