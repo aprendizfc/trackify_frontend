@@ -1,7 +1,8 @@
 @import './css/tailwind';
 
 :root {
-  font-family: 'Karla', sans-serif;
+  /* font-family: 'Karla', sans-serif; */
+  font-family: 'Roboto Flex', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -20,4 +21,10 @@ body {
   height: 100vh;
   @apply bg-white;
   @apply text-zinc-800;
+  @apply text-gray-700;
+}
+
+#root {
+  min-height: inherit;
+  height: inherit;
 }

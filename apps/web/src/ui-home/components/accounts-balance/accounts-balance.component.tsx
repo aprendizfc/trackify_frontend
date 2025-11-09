@@ -8,7 +8,7 @@ import {
 
 export const AccountsBalance: React.FC = () => {
   return (
-    <Card className="flex-1">
+    <Card className="flex-1" hasShadow={true}>
       <CardHeader>
         <CardTitle>Balance</CardTitle>
 
