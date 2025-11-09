@@ -8,22 +8,32 @@ import { buttonVariants } from '../helpers/button.helper'
 import { ButtonIcon } from './button-icon.component'
 
 export const Button: React.FC<ButtonProps> = ({
-  adornment,
-  adornmentPosition = 'start',
   appearance,
   asChild,
   children,
   className,
+  endAdornment,
+  size,
+  startAdornment,
   ...props
 }) => {
   const Component = asChild ? Slot : 'button'
-  const adornmentIsOnlyChild = !!(React.Children.count(children) === 0 && adornment)
+  const adornmentIsOnlyChild = !!(
+    React.Children.count(children) === 0 &&
+    (startAdornment || endAdornment)
+  )
 
   return (
     <Component
       data-slot="button"
       {...props}
-      className={cn(buttonVariants({ appearance, className }))}
+      className={cn(
+        buttonVariants({ appearance, size }),
+        {
+          'px-0': adornmentIsOnlyChild,
+        },
+        className
+      )}
     >
       <span
         className={cn('inline-flex items-center justify-center', {
@@ -31,13 +41,11 @@ export const Button: React.FC<ButtonProps> = ({
           'gap-2': !adornmentIsOnlyChild,
         })}
       >
-        {adornment && adornmentPosition === 'start' && (
-          <ButtonIcon adornment={adornment} />
-        )}
+        {startAdornment && <ButtonIcon adornment={startAdornment} size={size} />}
 
         {children}
 
-        {adornment && adornmentPosition === 'end' && <ButtonIcon adornment={adornment} />}
+        {endAdornment && <ButtonIcon adornment={endAdornment} size={size} />}
       </span>
     </Component>
   )

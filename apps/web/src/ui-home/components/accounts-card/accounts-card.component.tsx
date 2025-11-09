@@ -12,12 +12,12 @@ import { AccountList } from './account-list/account-list.component'
 
 export const AccountsCard: React.FC = () => {
   return (
-    <Card className="flex-1 px-4 pt-6 pb-5">
+    <Card className="flex-1 px-4 pt-6 pb-5" hasShadow={true}>
       <CardHeader className="mb-4">
         <CardTitle>Accounts</CardTitle>
 
         <CardAction>
-          <Button adornment={<Plus />} appearance="secondary" />
+          <Button appearance="secondary" startAdornment={<Plus />} />
         </CardAction>
       </CardHeader>
 

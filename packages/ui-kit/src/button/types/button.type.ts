@@ -5,11 +5,13 @@ import type { buttonVariants } from '../helpers/button.helper'
 export interface ButtonProps
   extends React.ComponentProps<'button'>,
     VariantProps<typeof buttonVariants> {
-  adornment?: React.ReactElement
-  adornmentPosition?: 'end' | 'start'
   asChild?: boolean
+  endAdornment?: React.ReactElement
+  startAdornment?: React.ReactElement
 }
 
-export interface ButtonIconProps extends Pick<ButtonProps, 'adornment'> {
+export interface ButtonIconProps {
+  adornment: React.ReactElement
   className?: string
+  size?: ButtonProps['size']
 }

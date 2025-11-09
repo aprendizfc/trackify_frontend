@@ -2,6 +2,7 @@ import type { StackProps } from '../../stack/types/stack.type'
 
 export interface CardProps extends React.ComponentProps<'div'> {
   children: React.ReactNode
+  hasShadow?: boolean
 }
 
 export interface CardHeaderProps extends React.ComponentProps<'div'> {

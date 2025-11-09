@@ -1,13 +1,10 @@
 import { createFileRoute } from '@tanstack/react-router'
 import React from 'react'
 
+import { LoginForm } from '@/ui-auth/components/login-form/login-form.component'
+
 const LoginPage: React.FC = () => {
-  return (
-    <React.Fragment>
-      <h1 className="mb-4 text-4xl font-bold">Login</h1>
-      <p className="text-lg text-gray-600">Please enter your credentials</p>
-    </React.Fragment>
-  )
+  return <LoginForm />
 }
 
 export const Route = createFileRoute('/(auth)/_auth/login')({

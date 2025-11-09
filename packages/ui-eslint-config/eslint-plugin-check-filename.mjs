@@ -11,6 +11,7 @@ const rule = {
       'context',
       'provider',
       'd',
+      'schema',
     ]
     const suffixPattern = `\\.(${validSuffixes.join('|')})$`
     const options = context.options[0] || {}

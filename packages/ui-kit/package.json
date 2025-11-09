@@ -10,9 +10,11 @@
     }
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.1",
     "@radix-ui/react-slot": "^1.2.3",
     "@trackify/ui-helpers": "workspace:*",
-    "class-variance-authority": "^0.7.1"
+    "class-variance-authority": "^0.7.1",
+    "react-hook-form": "^7.62.0"
   },
   "scripts": {
     "lint": "pnpm run format:check && pnpm run lint:check",
